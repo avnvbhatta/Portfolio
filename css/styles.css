@@ -1,0 +1,102 @@
+html,body{
+    height:100%
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 10vh;
+    background: goldenrod
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center
+}
+
+.absoluteCentered{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.intro{
+    width:100%;
+    height:100vh;
+    font-family: 'Goudy Bookletter 1911';
+    background: radial-gradient(circle, #74A6EE 0%, #485CB2 100%);
+    color: gainsboro;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills{
+    width:100%;
+    height:100vh;
+    background: burlywood;
+}
+
+.experience{
+    width:100%;
+    height:100vh;
+    background: cornflowerblue
+}
+
+.projects{
+    width:100%;
+    height:100vh;
+    background: skyblue
+}
+
+.full-screen {
+    height: 100vh; /* makes panels the entire window height */
+}
+  
+.red {
+    background-color: #cf3535;
+}
+.orange {
+    background-color: #ea6300;
+}
+
+.bcg-parallax, .bcg-parallax2, .bcg-parallax3{
+    padding: 5vh 0;
+    color: #fff;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    text-align: center
+}
+
+.bcg{
+    background: url('../img/srv6.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 140%;
+    top:0;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.content-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1140px;
+    position: relative;
+    z-index: 2;
+}
