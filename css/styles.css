@@ -1,27 +1,51 @@
 html,body{
-    height:100%
+    height:100%;
+    margin: 0;
 }
 
+h1{
+    margin: 0;
+}
 .container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+
 }
 
-.header{
+.avLogo{
+    position: fixed;
+    width: 5%;
+    height: 5%;
+    padding: 0px 0px 0px 15px;
+    min-width: 60px;
+    min-height: 90px;
+}
+
+.socialIcon{
+    border-radius: 50%;
+    height: auto;
+    width: 5vh;
+    padding: 0vh 2vh 0vh 2vh;
+}
+
+.socialBar{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     height: 10vh;
-    background: goldenrod
 }
 
 .footer{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center
+    align-items: center;
+    background:black;
+    color: gainsboro;
+
 }
 
 .absoluteCentered{
@@ -36,8 +60,7 @@ html,body{
     width:100%;
     height:100vh;
     font-family: 'Goudy Bookletter 1911';
-    background: radial-gradient(circle, #74A6EE 0%, #485CB2 100%);
-    color: gainsboro;
+    color: black;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -62,16 +85,6 @@ html,body{
     background: skyblue
 }
 
-.full-screen {
-    height: 100vh; /* makes panels the entire window height */
-}
-  
-.red {
-    background-color: #cf3535;
-}
-.orange {
-    background-color: #ea6300;
-}
 
 .bcg-parallax, .bcg-parallax2, .bcg-parallax3{
     padding: 5vh 0;
@@ -99,4 +112,21 @@ html,body{
     max-width: 1140px;
     position: relative;
     z-index: 2;
+    color: #26D0CE
+}
+
+
+.glow {
+	-webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+	
+}.glow:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(251, 252, 252, 0.8));
+
+}
+
+section .content{
+    padding: 10vh;
 }

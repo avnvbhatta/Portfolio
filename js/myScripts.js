@@ -1,30 +1,23 @@
 $(document).ready(function() {
 
-    var controller = new ScrollMagic.Controller()
-  //parallax scene
-  var slideParallaxScene = new ScrollMagic.Scene({
-    triggerElement: '.bcg-parallax',
-    triggerHook: 1,
-    duration: '100%'
-  })
-  .setTween(TweenMax.from('.bcg', 1, {y: '-30%', ease:Power0.easeNone}))
-  .addTo(controller)
+  var granimInstance = new Granim({
+    element: '#granim-canvas',
+    name: 'granim',
+    opacity: [1, 1],
+    states : {
+        "default-state": {
+            gradients: [
+              ['#8D12EB', '#AF61EB'],
+              ['#2A68F4', '#6792F2'],
+              ['#BC44F0', '#D088EE']
+            ],
+            transitionSpeed: 10000
+        } 
+    }
+ });
+ 
+   
 
-  var slideParallaxScene2 = new ScrollMagic.Scene({
-    triggerElement: '.bcg-parallax2',
-    triggerHook: 1,
-    duration: '100%'
-  })
-  .setTween(TweenMax.from('.bcg', 1, {y: '-30%', ease:Power0.easeNone}))
-  .addTo(controller)
-
-  var slideParallaxScene2 = new ScrollMagic.Scene({
-    triggerElement: '.bcg-parallax3',
-    triggerHook: 1,
-    duration: '100%'
-  })
-  .setTween(TweenMax.from('.bcg', 1, {y: '-30%', ease:Power0.easeNone}))
-  .addTo(controller)
 });
 
 
