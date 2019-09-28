@@ -12,10 +12,27 @@ $(document).ready(function() {
               ['#BC44F0', '#D088EE']
             ],
             transitionSpeed: 10000
-        } 
-    }
- });   
+          } 
+      }
+  }); 
+
+
+  applyDynamicCanvas()
+
+  $(window).on('resize', function(){
+    applyDynamicCanvas()
+  });
+
+
 
 });
+
+function applyDynamicCanvas(){
+  var containerHeight = $("#main").first();
+  var containerWidth = $("#main").width();
+
+  $('#granim-canvas').css("height", containerHeight.outerHeight());
+  $('#granim-canvas').css("width", containerWidth);
+}
 
 

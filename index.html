@@ -3,8 +3,7 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/myScripts.js">
-    </script>
+    <script src="js/myScripts.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Archivo|Fredericka+the+Great&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
@@ -18,22 +17,23 @@
 
 </head>
 <body>
-    <a href="#intro"><img id="avLogo" class="avLogo" src="img/av-logo.svg" alt="av-logo" ></a>
+        <canvas id="granim-canvas" style="position: absolute; z-index: -1;"></canvas>
 
-    <div class="container">
-
-            
+    <a href="#intro"><img id="avLogo" class="avLogo glow" src="img/av-logo.svg" alt="av-logo" ></a>
+    <div id="main" class="container">            
             <section id= "intro" class="intro">
-                 <canvas id="granim-canvas" class="intro" style="position: absolute; z-index: -1;"></canvas>
-                    <div style="display: flex; flex-direction: column">
+                    <div style="display: flex; flex-direction: column; padding: 90px">
                         <h1>Hi. I'm Abhinav, and I like web design.</h1>
                         <div class="socialBar">
                                 <a href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img class="socialIcon glow" src="/img/linkedin-logo.png" alt="linkedin-logo"></a>
                                 <a href="https://github.com/avnvbhatta"><img class="socialIcon glow" src="/img/github-logo.png" alt="github-logo"></a>
+                                <a href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="socialIcon glow" src="/img/pdf-logo.png" alt="email-logo"></a>
                                 <a href="mailto:avnvbhatta@gmail.com"><img class="socialIcon glow" src="/img/email-logo.png" alt="email-logo"></a>
+
                         </div>
                 </div>
             </section>
+
 <!--
             <div class="bcg-parallax">
                 <div class="bcg">
@@ -42,21 +42,38 @@
                     </div>
                 </div>
             </div>
--->
+-->         
             <section id="skills" class="skills">
-                    <div class="content">
-                            <h2>Skills</h2>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                industry's standard
-                                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-                                type specimen
-                                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                                essentially
-                                unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                                passages, and more
-                                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
+
+                    <canvas id="granim-canvas" class="skills" style="position: absolute; z-index: -1;"></canvas>
+
+                    <div class="content centeredText">
+                        <div style="display:flex; flex-direction: row; justify-content: space-evenly; 
+                        background: white;
+                        padding: 20px;
+                        border-radius: 1%;">
+                            <div style="padding: 0 10px 0px 10px">
+                                <img class="skillsLogo" src="/img/skills.png" alt="">
+                                <h2>Skills</h2>
+                                    <div><p>Java</p></div>
+                                    <div><p>Angular</p></div>
+                                    <div><p>React</p></div>
+                                    <div><p>JavaScript</p></div>
+                                    <div><p>NodeJS</p></div>
+                                    <div><p>ExpressJS</p></div>
+                                    <div><p>HTML</p></div>
+                                    <div><p>CSS</p></div>
+                            </div>
+                            <div style="padding: 0 10px 0px 10px">
+                                <img class="technologiesLogo" src="/img/techologies.png" alt="">
+                                <h2>Technologies</h2>
+                                    <div><p>Eclipse</p></div>
+                                    <div><p>VS Code</p></div>
+                                    <div><p>Android Studio</p></div>
+                                    <div><p>Microsoft SSMS</p></div>
+                                    <div><p>JIRA</p></div>
+                            </div>
+                        </div>
                     </div>
                     
             </section>
@@ -70,7 +87,7 @@
                 </div>
 -->
             <section class="experience">
-                    <div class="content">
+                    <div class="content centeredText">
                             <h2>Experience</h2>
                             <p>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
@@ -92,27 +109,30 @@
                     </div>
 -->
                 <section id="projects" class="projects">
-                    <div class="content">
+                    <h2 class="centeredText">My Recent Works</h2>
+                    <div class="content flexProject">
                         <a href="https://moodmate.herokuapp.com">
-                                <div class="card">
-                                        <img style="width:400px;height:200px" src="/img/moodmate.png" alt="moodmate">
-                                        <div>
-                                            <h2>Moodmate</h2>
-                                            <hr>
-                                            <p>Created using Angular, ExpressJS, NodeJS, Bootstrap, HTML5, CSS. Used Spotify Web API.</p>
-                                        </div>
-                                    </div>
+                            <div class="card">
+                                <img src="/img/moodmate.png" alt="moodmate">
+                                <div>
+                                    <h2>Moodmate</h2>
+                                    <hr>
+                                    <p>Created using Angular, ExpressJS, NodeJS, Bootstrap, HTML5, CSS. Used Spotify Web API.</p>
+                                </div>
+                            </div>
                         </a>
                         
-
-                        <div class="card">
-                                <img style="width:400px;height:200px" src="/img/sajjan.png" alt="sajjan">
+                        <a href="https://sajjanrajvaidya-b7e09.firebaseapp.com/">
+                            <div class="card">
+                                <img src="/img/sajjan.png" alt="sajjan">
                                 <div>
                                     <h2>Sajjan Raj Vaidya Website</h2>
                                     <hr>
                                     <p>Created using Angular, ExpressJS, NodeJS, Bootstrap, HTML5, CSS.</p>
                                 </div>
                             </div>
+                        </a>
+                        
 
                     </div>
                     
@@ -123,6 +143,10 @@
                     <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
                     <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
                     <div>Icons made by <a href="https://www.flaticon.com/authors/chanut" title="Chanut">Chanut</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/retinaicons" title="Retinaicons">Retinaicons</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
                 </div>
     </div>
 
