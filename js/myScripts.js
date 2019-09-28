@@ -14,9 +14,7 @@ $(document).ready(function() {
             transitionSpeed: 10000
         } 
     }
- });
- 
-   
+ });   
 
 });
 
