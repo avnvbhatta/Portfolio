@@ -6,6 +6,7 @@ html,body{
 h1{
     margin: 0;
     font-size:3em;
+    font-family: 'Goudy Bookletter 1911';
 }
 h2{
     font-family: 'Goudy Bookletter 1911';
@@ -28,6 +29,7 @@ p{
     padding: 0px 0px 0px 15px;
     min-width: 60px;
     min-height: 90px;
+    z-index: 5;
 }
 
 
@@ -46,6 +48,24 @@ p{
     height: 10vh;
 }
 
+
+.socialBarVertical{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    z-index: 5;
+}
+
+.socialBarVerticalActive{
+    opacity: 1;
+}
+
+
 .footer{
     display: flex;
     flex-direction: column;
@@ -53,6 +73,7 @@ p{
     align-items: center;
     background:black;
     color: gainsboro;
+    padding: 15px
 
 }
 
@@ -75,6 +96,14 @@ p{
     align-items: center;
 }
 
+.about{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
 .skills{
     width:100%;
 }
@@ -89,7 +118,7 @@ p{
 
 
 .bcg-parallax, .bcg-parallax2, .bcg-parallax3{
-    padding: 5vh 0;
+    padding: 10vh 0;
     color: #fff;
     background-color: #000;
     position: relative;
@@ -98,7 +127,7 @@ p{
 }
 
 .bcg{
-    background: url('../img/srv6.jpg') no-repeat;
+    background: url('../img/white-back.jpg') no-repeat;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -130,7 +159,7 @@ p{
 }
 
 section .content{
-    padding: 0px 90px 90px 90px;
+    padding: 90px 90px 00px 90px;
 }
 
 .card, .card img{
@@ -144,11 +173,13 @@ section .content{
     transition: all 0.3s linear;
 }
 
+.card h2, p{
+    padding: 0px 20px 0px 20px
+}
+
 .card:hover img{
-    transform: scaleX(-1);
     filter: blur(5px);
     opacity: 0.9;
-    transform: scale(1.2,1.2)
 
 }
 .card div{
@@ -199,4 +230,58 @@ section .content{
 .skillsLogo, .technologiesLogo{
     width: 5vh;
     height: 5vh;
+}
+
+
+.id-card-left{
+    background: skyblue;
+    height: 400px;
+    width: 215px;
+}
+.id-card-right{
+    background: #8c43ff;
+    height: 400px;
+    width: 515px;
+    text-align: justify;
+}
+
+.id-card-left img{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+  
+}
+.id-card-left h2{
+    text-align: center;
+}
+
+.id-card-right:hover .showOnHover{
+    opacity: 1;
+}
+
+.hideOnHover{
+    opacity: 1;
+    transition: opacity 0.3s linear;
+}
+
+.id-card-right:hover .hideOnHover{
+    opacity: 0;
+}
+
+.showOnHover{
+    position: relative; 
+    bottom: 70%; 
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+
+.language{
+    display: inline;
+    border-radius: 37px;
+    border: 1.5px solid black;
+    padding: 15px;
+    margin: 4px 2px;
+    color: black;
+    font-family: 'Arvo'
 }

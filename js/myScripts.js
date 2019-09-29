@@ -23,7 +23,26 @@ $(document).ready(function() {
     applyDynamicCanvas()
   });
 
+  var mainHeight = $("#main").first().outerHeight();
+  var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: mainHeight/2}});
+	// build scenes
+	var socialBarVertical = new ScrollMagic.Scene({triggerElement: "#skills"})
+          .setClassToggle("#socialBarVertical", "socialBarVerticalActive") // add class toggle
 
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+
+          // get the current offset
+// set a new offset
+  socialBarVertical.offset(80);
+
+  var slideParallaxScene = new ScrollMagic.Scene({
+    triggerElement: '.bcg-parallax',
+    triggerHook: 1,
+    duration: '200%'
+  })
+  .setTween(TweenMax.from('.bcg', 1, {y: '-30%', ease:Power0.easeNone}))
+  .addTo(controller)
 
 });
 
