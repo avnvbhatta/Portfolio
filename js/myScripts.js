@@ -24,7 +24,7 @@ $(document).ready(function() {
   });
 
   var mainHeight = $("#main").first().outerHeight();
-  var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: mainHeight/2+500}});
+  var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: mainHeight/2+1000}});
 	// build scenes
 	var socialBarVertical = new ScrollMagic.Scene({triggerElement: "#skills", duration: mainHeight})
           .setClassToggle("#socialBarVertical", "socialBarVerticalActive") // add class toggle
