@@ -24,31 +24,37 @@ $(document).ready(function() {
   });
 
   var mainHeight = $("#main").first().outerHeight();
-  var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: mainHeight/2}});
+  var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: mainHeight/2+500}});
 	// build scenes
-	var socialBarVertical = new ScrollMagic.Scene({triggerElement: "#skills"})
+	var socialBarVertical = new ScrollMagic.Scene({triggerElement: "#skills", duration: mainHeight})
           .setClassToggle("#socialBarVertical", "socialBarVerticalActive") // add class toggle
-
+					.addIndicators() // add indicators (requires plugin)
+          .addTo(controller);
+  
+  var navBarVertical = new ScrollMagic.Scene({triggerElement: "#skills", duration: mainHeight})
+          .setClassToggle("#navBarVertical", "navBarVerticalOffset") // add class toggle
+					.addIndicators() // add indicators (requires plugin)
+          .addTo(controller);
+          
+  var toggleAll = new ScrollMagic.Scene({triggerElement: "#idCardMain", duration: mainHeight})
+          .setClassToggle(".glow", "glowBlue") // add class toggle
 					.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 
           // get the current offset
 // set a new offset
-  socialBarVertical.offset(80);
+  navBarVertical.offset(200);
+  socialBarVertical.offset(200);
+  toggleAll.offset(50)
 
-  var slideParallaxScene = new ScrollMagic.Scene({
-    triggerElement: '.bcg-parallax',
-    triggerHook: 1,
-    duration: '200%'
-  })
-  .setTween(TweenMax.from('.bcg', 1, {y: '-30%', ease:Power0.easeNone}))
-  .addTo(controller)
+
+
 
 });
 
 function applyDynamicCanvas(){
-  var containerHeight = $("#main").first();
-  var containerWidth = $("#main").width();
+  var containerHeight = $("#intro").first();
+  var containerWidth = $("#intro").width();
 
   $('#granim-canvas').css("height", containerHeight.outerHeight());
   $('#granim-canvas').css("width", containerWidth);

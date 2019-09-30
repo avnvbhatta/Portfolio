@@ -8,6 +8,7 @@ h1{
     font-size:3em;
     font-family: 'Goudy Bookletter 1911';
 }
+
 h2{
     font-family: 'Goudy Bookletter 1911';
 }
@@ -56,14 +57,39 @@ p{
     top: 10%;
     justify-content: center;
     align-items: center;
+    display: none;
     opacity: 0;
-    transition: opacity 0.3s linear;
+    transition: opacity 0.3s ease;
     z-index: 5;
 }
 
 .socialBarVerticalActive{
+    display: flex;
     opacity: 1;
 }
+
+.navBarVertical{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10%;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.navBarVerticalOffset{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 37%;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
 
 
 .footer{
@@ -77,14 +103,6 @@ p{
 
 }
 
-.absoluteCentered{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 .intro{
     width:100%;
     height:100vh;
@@ -96,7 +114,7 @@ p{
     align-items: center;
 }
 
-.about{
+.mySection{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -104,46 +122,22 @@ p{
     align-content: center;
 }
 
-.skills{
-    width:100%;
+
+#idCardMain, #education, #projects{
+    background-image: #616161;
 }
 
-.experience{
-    width:100%;
+#skills, #experience{
+    background: #f5f5f5;
 }
 
-.projects{
-    width:100%;
+.content h1{
+    padding-bottom: 10vh
 }
 
+.socialBarVertical a{
+    padding: 10px 0px 0px 0px;
 
-.bcg-parallax, .bcg-parallax2, .bcg-parallax3{
-    padding: 10vh 0;
-    color: #fff;
-    background-color: #000;
-    position: relative;
-    overflow: hidden;
-    text-align: center
-}
-
-.bcg{
-    background: url('../img/white-back.jpg') no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    height: 140%;
-    top:0;
-    z-index: 1;
-    opacity: 0.7;
-}
-
-.content-wrapper{
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1140px;
-    position: relative;
-    z-index: 2;
-    color: #26D0CE
 }
 
 
@@ -154,21 +148,35 @@ p{
     transition: all 0.3s linear;
 	
 }.glow:hover {
-    -webkit-filter: drop-shadow(0px 0px 5px rgba(251, 252, 252, 0.8));
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(251, 251, 252, 0.8));
 
 }
 
+
+.glowBlue {
+	-webkit-filter: drop-shadow(0px 0px 0px  rgba(3, 107, 241, 0.8));
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+	
+}.glowBlue:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(3, 107, 241, 0.8));
+
+}
+
+
 section .content{
-    padding: 90px 90px 00px 90px;
+    padding: 90px;
 }
 
 .card, .card img{
-    width:60vh;
-    height:30vh;
+    width:50vh;
+    height:25vh;
+    transition: all 0.2s linear
 }
 
 .card img{
-    position: absolute;
+    position: relative;
     border-radius: 2%;
     transition: all 0.3s linear;
 }
@@ -178,41 +186,47 @@ section .content{
 }
 
 .card:hover img{
-    filter: blur(5px);
-    opacity: 0.9;
+    opacity: 0.1;
+    background-color: blue
 
+}
+
+.card:hover{
+    border: 2px solid black;
+    border-radius: 3%;
 }
 .card div{
     position: relative;
-    color: white;
-    top: 50%;
+    color: black;
+    bottom: 75%;
     opacity: 0;
     transition: all 0.2s linear;
 }
 
 .card:hover div{
-    opacity: 1;
+    opacity: 0.9;
+    
 }
 
 .card div hr{
     border: none;
-    border-bottom: solid 2px white;
+    border-bottom: solid 2px black;
     width: 0px;
     transition: all 0.5s;
-    position: absolute;
     bottom: 50px; 
     left:0px;
 }
 
 .card:hover div hr{
     border: none;
-    border-bottom: solid 2px white;
+    border-bottom: solid 2px black;
     width: 400px;
     transition-delay: 0.2s;
 }
 
-.projects a{
+.projectLink{
     text-decoration: none;
+    padding: 25px;
 }
 
 
@@ -230,6 +244,7 @@ section .content{
 .skillsLogo, .technologiesLogo{
     width: 5vh;
     height: 5vh;
+    padding: 25px;
 }
 
 
@@ -239,7 +254,7 @@ section .content{
     width: 215px;
 }
 .id-card-right{
-    background: #8c43ff;
+    background: #f5f5f5;
     height: 400px;
     width: 515px;
     text-align: justify;
@@ -249,30 +264,24 @@ section .content{
     height: 180px;
     width: 180px;
     border-radius: 50%;
-  
 }
 .id-card-left h2{
     text-align: center;
 }
 
-.id-card-right:hover .showOnHover{
-    opacity: 1;
-}
 
 .hideOnHover{
     opacity: 1;
-    transition: opacity 0.3s linear;
+    transition: all 0.3s ease-in;
 }
 
-.id-card-right:hover .hideOnHover{
-    opacity: 0;
-}
+
 
 .showOnHover{
     position: relative; 
     bottom: 70%; 
     opacity: 0;
-    transition: opacity 0.3s linear;
+    transition: all 0.3s linear;
 }
 
 
@@ -284,4 +293,30 @@ section .content{
     margin: 4px 2px;
     color: black;
     font-family: 'Arvo'
+}
+
+
+
+.timelineContent{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center
+}
+
+
+.timelineItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navInactive{
+    opacity: 0;
+    transition: opacity 0.3s ease
+}
+
+.navActive{
+    opacity: 1;
 }

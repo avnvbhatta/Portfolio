@@ -32,6 +32,13 @@
         <a href="mailto:avnvbhatta@gmail.com"><img class="socialIcon glow" src="/img/email-logo.png"
                 alt="email-logo"></a>
     </div>
+    <div id="navBarVertical" class="navBarVertical">
+            <a id="navAbout" class="navActive" href="#idCardMain"><img class="socialIcon glow" src="/img/about.svg" alt="email-logo"></a>
+            <a id="navSkills" class="navActive" href="#skills"><img class="socialIcon glow" src="/img/skills-code.svg" alt="email-logo" style="border-radius: 0"></a>
+            <a id="navEducation" class="navActive" href="#education"><img class="socialIcon glow" src="/img/education.svg" alt="email-logo"></a>
+            <a id="navExperience" class="navActive" href="#experience"><img class="socialIcon glow" src="/img/work.svg" alt="email-logo"></a>
+            <a id="navProjects" class="navActive" href="#projects"><img class="socialIcon glow" src="/img/projects.svg" alt="email-logo"></a>
+    </div>
     <div id="main" class="container">
         <section id="intro" class="intro">
             <div style="display: flex; flex-direction: column; padding: 90px">
@@ -50,11 +57,13 @@
         </section>
 
 
-        <section id="idCardMain" class="about">
+        <section id="idCardMain" class="mySection">
+            <div class="content centeredText">
+                    <h1>- About -</h2>
             <div class="idCard" style="display: flex; flex-wrap: nowrap;">
                 <div class="id-card-left" style="display: flex; flex-direction: column; justify-content: center;
                         align-items: center;">
-                    <img src="/img/me.PNG" style="position: absolute;" alt="me">
+                    <img src="/img/me.PNG" style="position: absolute; border: 2px solid white" alt="me">
                     <div style="position: relative; top: 35%; text-align: center">
                         <h2>Web Developer</h2>
                         <p style="position: relative; top: -16%"><img src="/img/location-icon.svg"
@@ -66,23 +75,24 @@
                     <div class="hideOnHover">
                         <h1 style="text-align: center; padding: 40px 40px 0px 40px">Abhinav Bhatta</h1>
 
-                        <p style="padding: 20px 40px 0px 40px">Welcome to my website! A bit about me, I enjoy creating
+                        <p style="padding: 20px 40px 0px 40px">I enjoy creating
                             beautiful, elegant and minimalist designs, and I am really passionate about building fluid,
                             dynamic and responsive user interfaces.
-                            <br><br>
-                            Currently, I am living in Stockton, CA where I am pursuing a Master's Degree in Engineering
-                            Science.
-                            <br><br>
-                            Please don't hesitate to contact me for any questions.
                         </p>
-                        <div style="display: flex; flex-direction: row-reverse; 
-                                    padding: 0px 40px 0px 0px">
-                            <p>Skills and Technologies</p>
+                        <div class="socialBar">
+                            <a href="https://www.linkedin.com/in/abhinav-bhatta-14658171/"><img class="socialIcon glow"
+                                    src="/img/linkedin-logo.png" alt="linkedin-logo"></a>
+                            <a href="https://github.com/avnvbhatta"><img class="socialIcon glow" src="/img/github-logo.png"
+                                    alt="github-logo"></a>
+                            <a href="/files/Resume_Abhinav_Bhatta.pdf" download><img class="socialIcon glow"
+                                    src="/img/pdf-logo.png" alt="email-logo"></a>
+                            <a href="mailto:avnvbhatta@gmail.com"><img class="socialIcon glow" src="/img/email-logo.png"
+                                    alt="email-logo"></a>
                         </div>
                     </div>
 
                     <div class="showOnHover">
-                        more content here
+                            <!-- for more content later -->
                     </div>
                 </div>
 
@@ -91,9 +101,9 @@
 
         </section>
 
-        <section >
+        <section id="skills" class="mySection">
             <div class="content centeredText">
-                <h1>Skills</h2>
+                <h1>- Skills -</h2>
             
             <div style="display:flex; flex-direction: column; justify-content: space-evenly">
                     <div style="display:flex; flex-direction: column; 
@@ -131,32 +141,58 @@
             </div>
         </section>
 
-        
+
+        <section id="education" class="mySection">
+                <div class="content centeredText">
+                    <h1>- Education -</h2>
+                    <div class="timelineContent">
+                            <div class="timelineItem">
+                                <img class="skillsLogo" src="/img/education.svg" alt="">
+                                <h2>University of Maine</h2>
+                                <p>Bachelor's Degree in Computer Science</p>
+                            </div>
+                            <div class="timelineItem">
+                                <h2>University of the Pacific</h2>
+                                <p>Master's Degree in Engineering Science</p>
+                            </div>
+                    </div>
+                    
+                
+                </div>
+            </section>
+
+            <section id="experience" class="mySection">
+                    <div class="content centeredText">
+                        <h1>- Experience -</h2>
+                        <div class="timelineContent">
+                                <div class="timelineItem">
+                                    <img class="skillsLogo" src="/img/work.svg" alt="">
+                                    <h2>University of Maine System</h2>
+                                    <p>Student SQL Programmer</p>
+                                </div>
+                                <div class="timelineItem">
+                                        <h2>Nationwide Insurance</h2>
+                                        <p>Application Developer Intern</p>
+                                    </div>
+                                <div class="timelineItem">
+                                    <h2>TR3 Solutions Inc.</h2>
+                                    <p>Software Developer</p>
+                                </div>
+    
+                        </div>
+                        
+                    
+                    </div>
+                </section>
 
         
-        <section class="experience" id="experience">
-            <div class="content centeredText">
-                <h1>Experience</h2>
-                    <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                            industry's standard
-                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                            make a type specimen
-                            book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                            remaining essentially
-                            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                            Ipsum passages, and more
-                            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-            </div>
-        </section>
 
-        <section id="projects" class="projects">
+        <section id="projects" class="mySection">
             <div class="content centeredText"> 
-                <h1>Projects</h1>
-            </div>
+                <h1>- Projects -</h1>
+                <img class="skillsLogo" src="/img/projects.svg" alt="">
             <div class="flexProject">    
-                <a href="https://moodmate.herokuapp.com">
+                <a class="projectLink" href="https://moodmate.herokuapp.com">
                     <div class="card">
                         <img src="/img/moodmate.png" alt="moodmate">
                         <div>
@@ -168,7 +204,7 @@
                     </div>
                 </a>
 
-                <a href="https://sajjanrajvaidya-b7e09.firebaseapp.com/">
+                <a class="projectLink" href="https://sajjanrajvaidya-b7e09.firebaseapp.com/">
                     <div class="card">
                         <img src="/img/sajjan.png" alt="sajjan">
                         <div>
@@ -179,6 +215,7 @@
                     </div>
                 </a>
             </div>
+        </div>
 
         </section>
 
