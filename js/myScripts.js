@@ -28,17 +28,14 @@ $(document).ready(function() {
 	// build scenes
 	var socialBarVertical = new ScrollMagic.Scene({triggerElement: "#skills", duration: mainHeight})
           .setClassToggle("#socialBarVertical", "socialBarVerticalActive") // add class toggle
-					.addIndicators() // add indicators (requires plugin)
           .addTo(controller);
   
   var navBarVertical = new ScrollMagic.Scene({triggerElement: "#skills", duration: mainHeight})
           .setClassToggle("#navBarVertical", "navBarVerticalOffset") // add class toggle
-					.addIndicators() // add indicators (requires plugin)
           .addTo(controller);
           
   var toggleAll = new ScrollMagic.Scene({triggerElement: "#idCardMain", duration: mainHeight})
           .setClassToggle(".glow", "glowBlue") // add class toggle
-					.addIndicators() // add indicators (requires plugin)
 					.addTo(controller);
 
           // get the current offset
